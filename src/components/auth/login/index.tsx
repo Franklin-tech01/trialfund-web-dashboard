@@ -18,7 +18,7 @@ export default function LoginPage() {
 			<Card className='w-full max-w-md shadow-lg'>
 				<CardHeader>
 					<CardTitle className='text-center text-2xl font-bold'>
-						TRIAl<span className='text-yellow-500'>FUND</span>
+						TRIAL<span className='text-yellow-500'>FUND</span>
 					</CardTitle>
 				</CardHeader>
 				<CardContent>

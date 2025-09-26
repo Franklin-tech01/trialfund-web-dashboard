@@ -171,6 +171,15 @@ export default function RegisterPage() {
 								Register
 							</Button>
 						</Link>
+
+						<p className='text-center mt-3   text-sm'>
+							Already have an account?{" "}
+							<Link
+								href='/auth/login'
+								className='text-yellow-600 hover:underline'>
+								Login
+							</Link>
+						</p>
 					</form>
 				</CardContent>
 			</Card>

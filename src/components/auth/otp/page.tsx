@@ -3,16 +3,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function OtpVerificationPage() {
 	const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+	const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
 	const handleChange = (value: string, index: number) => {
-		if (value.length > 1) return;
+		if (/[^0-9]/.test(value)) return; // only numbers
 		const newOtp = [...otp];
 		newOtp[index] = value;
 		setOtp(newOtp);
+
+		if (value && index < otp.length - 1) {
+			inputRefs.current[index + 1]?.focus();
+		}
+	};
+
+	const handleKeyDown = (
+		e: React.KeyboardEvent<HTMLInputElement>,
+		index: number
+	) => {
+		if (e.key === "Backspace" && !otp[index] && index > 0) {
+			inputRefs.current[index - 1]?.focus();
+		}
 	};
 
 	return (
@@ -34,6 +48,10 @@ export default function OtpVerificationPage() {
 									maxLength={1}
 									value={digit}
 									onChange={(e) => handleChange(e.target.value, i)}
+									onKeyDown={(e) => handleKeyDown(e, i)}
+									ref={(el) => {
+										inputRefs.current[i] = el;
+									}}
 									className='w-12 h-12 text-center text-xl'
 								/>
 							))}
