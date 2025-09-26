@@ -30,11 +30,11 @@ export default function OtpVerificationPage() {
 	};
 
 	return (
-		<div className='min-h-screen flex items-center justify-center bg-gradient-to-b from-yellow-300 to-yellow-100 p-4'>
+		<div className='min-h-screen flex items-center justify-center bg-yellow-400 p-4'>
 			<Card className='w-full max-w-md shadow-lg'>
 				<CardHeader>
 					<CardTitle className='text-center text-2xl font-bold'>
-						Enter <span className='text-yellow-500'>OTP</span>
+						Enter <span className='text-yellow-400'>OTP</span>
 					</CardTitle>
 				</CardHeader>
 				<CardContent>
@@ -57,13 +57,13 @@ export default function OtpVerificationPage() {
 							))}
 						</div>
 
-						<Button className='w-full bg-yellow-500 hover:bg-yellow-600'>
+						<Button className='w-full bg-yellow-400 hover:bg-yellow-600'>
 							Verify
 						</Button>
 
 						<p className='text-center text-sm text-gray-600'>
 							Didn’t receive a code?{" "}
-							<a href='#' className='text-yellow-600 hover:underline'>
+							<a href='#' className='text-yellow-400 hover:underline'>
 								Resend OTP
 							</a>
 						</p>

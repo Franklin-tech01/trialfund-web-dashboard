@@ -9,17 +9,22 @@ import { cn } from "@/lib/utils";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function LoginPage() {
 	const [showPassword, setShowPassword] = useState(false);
 
 	return (
-		<div className='min-h-screen flex items-center justify-center bg-gradient-to-b from-yellow-300 to-yellow-100 p-4'>
+		<div className='min-h-screen flex items-center justify-center bg-yellow-400 p-4'>
 			<Card className='w-full max-w-md shadow-lg'>
 				<CardHeader>
-					<CardTitle className='text-center text-2xl font-bold'>
-						TRIAL<span className='text-yellow-500'>FUND</span>
-					</CardTitle>
+					<Image
+						src='/assets/images/logo.jpeg'
+						alt='TrialFund Logo'
+						width={150}
+						height={50}
+						className='mx-auto mb-4'
+					/>
 				</CardHeader>
 				<CardContent>
 					<form className='space-y-4'>
@@ -50,14 +55,14 @@ export default function LoginPage() {
 							</div>
 						</div>
 
-						<Button className='w-full bg-yellow-500 hover:bg-yellow-600'>
+						<Button className='w-full bg-yellow-400 hover:bg-yellow-600'>
 							Login
 						</Button>
 
 						<div className='text-center'>
 							<Link
 								href='/auth/forget-password'
-								className='text-sm text-yellow-600 hover:underline'>
+								className='text-sm text-yellow-400 hover:underline'>
 								Forgot Password?
 							</Link>
 						</div>
@@ -81,7 +86,7 @@ export default function LoginPage() {
 							Don’t have an account?{" "}
 							<Link
 								href='/auth/register'
-								className='text-yellow-600 hover:underline'>
+								className='text-yellow-400 hover:underline'>
 								Sign up
 							</Link>
 						</p>

@@ -15,18 +15,23 @@ import {
 } from "@/components/ui/select";
 import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function RegisterPage() {
 	const [showPassword, setShowPassword] = useState(false);
 	const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
 	return (
-		<div className='min-h-screen flex items-center justify-center bg-gradient-to-b from-yellow-300 to-yellow-100 p-4'>
+		<div className='min-h-screen flex items-center justify-center bg-yellow-400 p-4'>
 			<Card className='w-full max-w-3xl shadow-lg'>
 				<CardHeader>
-					<CardTitle className='text-center text-2xl font-bold'>
-						TRIAL<span className='text-yellow-500'>FUND</span>
-					</CardTitle>
+					<Image
+						src='/assets/images/logo.jpeg'
+						alt='TrialFund Logo'
+						width={150}
+						height={20}
+						className='mx-auto mb-4'
+					/>
 				</CardHeader>
 				<CardContent>
 					<form className='space-y-6'>
@@ -137,7 +142,7 @@ export default function RegisterPage() {
 								<Checkbox id='policy' />
 								<Label htmlFor='policy' className='text-sm'>
 									I agree to the processing of personal data according to{" "}
-									<a href='#' className='text-yellow-600 hover:underline'>
+									<a href='#' className='text-yellow-400 hover:underline'>
 										Privacy Policy
 									</a>
 								</Label>
@@ -167,7 +172,7 @@ export default function RegisterPage() {
 
 						{/* Submit button */}
 						<Link href='/auth/otp'>
-							<Button className='w-full bg-yellow-500 hover:bg-yellow-600'>
+							<Button className='w-full bg-yellow-400 hover:bg-yellow-600'>
 								Register
 							</Button>
 						</Link>

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ForgotPasswordPage() {
 	return (
-		<div className='min-h-screen flex items-center justify-center bg-gradient-to-b from-yellow-300 to-yellow-100 p-4'>
+		<div className='min-h-screen flex items-center justify-center bg-yellow-400 p-4'>
 			<Card className='w-full max-w-md shadow-lg'>
 				<CardHeader>
 					<CardTitle className='text-center text-2xl font-bold'>
@@ -21,13 +21,13 @@ export default function ForgotPasswordPage() {
 							<Input id='email' type='email' placeholder='you@example.com' />
 						</div>
 
-						<Button className='w-full bg-yellow-500 hover:bg-yellow-600'>
+						<Button className='w-full bg-yellow-400 hover:bg-yellow-500'>
 							Send Reset Link
 						</Button>
 
 						<p className='text-center text-sm'>
 							Remembered your password?{" "}
-							<a href='/login' className='text-yellow-600 hover:underline'>
+							<a href='/auth/login' className='text-yellow-400 hover:underline'>
 								Back to Login
 							</a>
 						</p>
