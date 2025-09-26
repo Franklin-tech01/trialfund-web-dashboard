@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useRef, useState } from "react";
+import Link from "next/link";
 
 export default function OtpVerificationPage() {
 	const [otp, setOtp] = useState(["", "", "", "", "", ""]);
@@ -56,10 +57,11 @@ export default function OtpVerificationPage() {
 								/>
 							))}
 						</div>
-
-						<Button className='w-full bg-yellow-400 hover:bg-yellow-600'>
-							Verify
-						</Button>
+						<Link href='/account'>
+							<Button className='w-full bg-yellow-400 hover:bg-yellow-600'>
+								Verify OTP
+							</Button>
+						</Link>
 
 						<p className='text-center text-sm text-gray-600'>
 							Didn’t receive a code?{" "}
