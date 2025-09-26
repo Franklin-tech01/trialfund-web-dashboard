@@ -22,11 +22,11 @@ export default function RegisterPage() {
 	const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
 	return (
-		<div className='min-h-screen flex items-center justify-center bg-yellow-400 p-4'>
+		<div className='min-h-screen flex items-center justify-center bg-[#131313] p-4'>
 			<Card className='w-full max-w-3xl shadow-lg'>
 				<CardHeader>
 					<Image
-						src='/assets/images/logo.jpeg'
+						src='/assets/images/logo.JPG'
 						alt='TrialFund Logo'
 						width={150}
 						height={20}
