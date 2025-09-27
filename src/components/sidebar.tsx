@@ -101,8 +101,12 @@ import Image from "next/image";
 import Link from "next/link";
 const menuItems = [
 	{ label: "Accounts", icon: LayoutDashboard, href: "/account" },
-	{ label: "Transactions", icon: Wallet, href: "/transactions" },
-	{ label: "Payouts", icon: Wallet, href: "/payouts" },
+	// { label: "Transactions", icon: Wallet, href: "/transactions" },
+	{
+		label: "Payouts",
+		icon: Wallet,
+		href: "https://trial2fund.com.ng/#pricing",
+	},
 	{ label: "Refer & Earn", icon: Gift, href: "/refer-and-earn" },
 	{ label: "My Offers", icon: Users, href: "/my-offers" },
 	{ label: "Competitions", icon: Trophy, href: "/competitions" },
@@ -149,7 +153,7 @@ export function Sidebar({
 				</div>
 				<nav className='flex-1 space-y-1 px-2'>
 					{menuItems.map(({ label, icon: Icon, href }) => (
-						<Link href={href} key={label} passHref>
+						<Link href={href} target='_blank' key={label} passHref>
 							<Button
 								key={label}
 								variant='ghost'
@@ -191,7 +195,7 @@ export function Sidebar({
 						</div>
 						<nav className='flex-1 space-y-1 px-2'>
 							{menuItems.map(({ label, icon: Icon, href }) => (
-								<Link href={href} key={label} passHref>
+								<Link href={href} target='_blank' key={label} passHref>
 									<Button
 										key={label}
 										variant='ghost'
