@@ -12,7 +12,7 @@ export default function Accounts() {
 			<Tabs defaultValue='active' className='w-full'>
 				<TabsList>
 					<TabsTrigger value='active'>Active</TabsTrigger>
-					<TabsTrigger value='inactive'>Inactive</TabsTrigger>
+					{/* <TabsTrigger value='inactive'>Inactive</TabsTrigger> */}
 					<TabsTrigger value='breached'>Breached</TabsTrigger>
 				</TabsList>
 			</Tabs>

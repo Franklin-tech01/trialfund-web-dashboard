@@ -32,6 +32,7 @@
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Menu } from "lucide-react";
+import Link from "next/link";
 
 export function TopNav({
 	setMobileOpen,
@@ -56,12 +57,14 @@ export function TopNav({
 				</div>
 			</div>
 			<div className='flex items-center gap-2'>
-				<Button variant='outline' className='text-indigo-900 text-sm'>
+				{/* <Button variant='outline' className='text-indigo-900 text-sm'>
 					Free Trial
-				</Button>
-				<Button className='bg-yellow-500 hover:bg-yellow-600 text-black text-sm'>
-					Start Challenge
-				</Button>
+				</Button> */}
+				<Link href={"https://trial2fund.com.ng/#pricing"}>
+					<Button className='bg-yellow-500 hover:bg-yellow-600 text-black text-sm'>
+						Start Challenge
+					</Button>
+				</Link>
 				<Avatar>
 					<AvatarFallback>FM</AvatarFallback>
 				</Avatar>

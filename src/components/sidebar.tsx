@@ -109,12 +109,12 @@ const menuItems = [
 	},
 	{ label: "Refer & Earn", icon: Gift, href: "/refer-and-earn" },
 	{ label: "My Offers", icon: Users, href: "/my-offers" },
-	{ label: "Competitions", icon: Trophy, href: "/competitions" },
+	// { label: "Competitions", icon: Trophy, href: "/competitions" },
 	{ label: "Certificates", icon: FileBadge, href: "/certificates" },
 	{ label: "Resources", icon: HelpCircle, href: "/resources" },
 	{ label: "Trading Rules", icon: Settings, href: "/trading-rules" },
 	{ label: "FAQ", icon: HelpCircle, href: "/faq" },
-	{ label: "Ticket", icon: HelpCircle, href: "/ticket" },
+	// { label: "Ticket", icon: HelpCircle, href: "/ticket" },
 ];
 
 export function Sidebar({
