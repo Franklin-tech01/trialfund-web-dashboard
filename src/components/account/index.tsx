@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Link from "next/link";
 
 export default function Accounts() {
 	return (
@@ -48,9 +49,11 @@ export default function Accounts() {
 						<p>Equity: $50,000</p>
 						<p>Balance: $50,000</p>
 						<p>Account Type: Challenge Account</p>
-						<Button className='mt-4 bg-yellow-500 hover:bg-yellow-600'>
-							Dashboard
-						</Button>
+						<Link href={"/account/account-overview"}>
+							<Button className='mt-4 bg-yellow-500 hover:bg-yellow-600'>
+								Dashboard
+							</Button>
+						</Link>
 					</CardContent>
 				</Card>
 			</div>
